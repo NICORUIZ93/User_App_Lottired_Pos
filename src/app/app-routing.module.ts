@@ -1,25 +1,38 @@
-import {NgModule} from '@angular/core';
-import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
-import {Page404Component} from './static/page404/page404.component';
+import { NgModule } from '@angular/core';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Page404Component } from './pages/static/page404/page404.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/auth/login/login.module').then((m) => m.LoginPageModule),
+  },
+  {
+    path: 'tabs',
     loadChildren: () =>
       import('./pages/tabs/tabs.module').then((m) => m.TabsPageModule),
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
   {
     path: '**',
     pathMatch: 'full',
     component: Page404Component,
   },
+  {
+    path: 'signup',
+    loadChildren: () => import('./pages/auth/signup/signup.module').then( m => m.SignupPageModule)
+  },
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules }),
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}
