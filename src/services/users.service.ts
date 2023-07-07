@@ -8,7 +8,9 @@ import {environment} from 'src/environments/environment.development';
 })
 export class UsersService {
   url = environment.url;
-  constructor(private http: HttpClient) {}
+
+  constructor(private http: HttpClient) {
+  }
 
   getAll() {
     return this.http.get(this.url + '/user/listar', {
@@ -28,7 +30,7 @@ export class UsersService {
     });
   }
 
-  deleteUser(id:number) {
+  deleteUser(id: number) {
     return this.http.delete(this.url + '/user/guardar/' + id, {
       headers: {
         Authorization: 'Basic ' + window.btoa('admin1' + ':' + 'admin1'),

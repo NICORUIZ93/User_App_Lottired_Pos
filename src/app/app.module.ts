@@ -14,4 +14,5 @@ import {Page404Component} from './static/page404/page404.component';
   providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

@@ -14,10 +14,12 @@ const routes: Routes = [
     component: Page404Component,
   },
 ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules}),
   ],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+}

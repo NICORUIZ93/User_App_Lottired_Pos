@@ -1,10 +1,10 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment.development';
-import { ToastService } from './toast.service';
-import { Status } from '../models/status';
+import {HttpClient} from '@angular/common/http';
+import {Injectable} from '@angular/core';
+import {Router} from '@angular/router';
+import {Observable} from 'rxjs';
+import {environment} from 'src/environments/environment.development';
+import {ToastService} from './toast.service';
+import {Status} from '../models/status';
 
 @Injectable({
   providedIn: 'root',
@@ -12,11 +12,13 @@ import { Status } from '../models/status';
 export class LoginService {
   url = environment.url;
   user = [];
+
   constructor(
     private http: HttpClient,
     private router: Router,
     private toastService: ToastService
-  ) {}
+  ) {
+  }
 
   signin(data: any) {
     this.user = data;
