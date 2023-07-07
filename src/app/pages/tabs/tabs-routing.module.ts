@@ -20,6 +20,13 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'configuraciones',
+        loadChildren: () =>
+          import('../configurations/configurations.module').then(
+            (m) => m.ConfigurationsPageModule
+          ),
+      },
+      {
         path: '',
         redirectTo: 'tab1',
         pathMatch: 'full',

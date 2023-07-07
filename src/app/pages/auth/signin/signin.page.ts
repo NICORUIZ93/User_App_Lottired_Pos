@@ -1,8 +1,8 @@
-import {Component, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
-import {Router} from '@angular/router';
-import {environment} from 'src/environments/environment';
-import {LoginService} from 'src/services/login.service';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
+import { LoginService } from 'src/services/login.service';
 
 @Component({
   selector: 'app-signin',
@@ -19,8 +19,7 @@ export class SigninPage implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private loginService: LoginService
-  ) {
-  }
+  ) {}
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
@@ -31,10 +30,6 @@ export class SigninPage implements OnInit {
 
   onSubmit() {
     this.loginService.signin(this.loginForm.value);
-  }
-
-  signin() {
     this.router.navigate(['/tabs']);
   }
-
 }
