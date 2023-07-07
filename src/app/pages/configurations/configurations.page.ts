@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./configurations.page.scss'],
 })
 export class ConfigurationsPage {
-  theme = 'light';
+  theme = 'dark';
 
   constructor() {}
 
