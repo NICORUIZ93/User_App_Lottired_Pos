@@ -2,9 +2,7 @@ import {HttpClient} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {Observable} from 'rxjs';
-import {environment} from 'src/environments/environment.development';
-import {ToastService} from './toast.service';
-import {Status} from '../models/status';
+import {environment} from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -13,11 +11,7 @@ export class LoginService {
   url = environment.url;
   user = [];
 
-  constructor(
-    private http: HttpClient,
-    private router: Router,
-    private toastService: ToastService
-  ) {
+  constructor(private http: HttpClient, private router: Router) {
   }
 
   signin(data: any) {
@@ -27,16 +21,10 @@ export class LoginService {
         localStorage.setItem('auth_token', value.token);
       },
       error: (err) => {
-        this.toastService.showToast(err.name, err.message, Status.danger);
         console.log(err);
       },
       complete: () => {
-        this.toastService.showToast(
-          'Este es el titulo de la notificacion!!!',
-          'Este el el cuerpo del mensaje',
-          Status.success
-        );
-        this.router.navigate(['/sales']);
+        this.router.navigate(['/tabs']);
       },
     });
   }

@@ -12,6 +12,35 @@
   </ion-header>
 
   <ion-content>
-    <ion-button (click)="signin()" class="">hola</ion-button>
+    <div class="cristal">
+      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+        <img src="assets/Lottired_Pos (1).svg" alt="" srcset="" />
+        <ion-input
+          fill="outline"
+          formControlName="document"
+          label="Usuario"
+          label-placement="floating"
+          placeholder="Usuario"
+          type="text"
+        ></ion-input>
+        <br />
+        <ion-input
+          fill="outline"
+          formControlName="password"
+          label="Contraseña"
+          label-placement="floating"
+          placeholder="Contraseña"
+          type="password"
+        ></ion-input>
+        <ion-button [disabled]="!loginForm.valid" type="submit"
+          >Ingresa
+        </ion-button>
+      </form>
+
+      <div>
+        <p>Olvidaste tu contraseña? ingresa <a href="">aqui</a>!</p>
+      </div>
+      <a href=""></a>
+    </div>
   </ion-content>
 </ion-content>
