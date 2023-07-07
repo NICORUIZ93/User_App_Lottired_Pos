@@ -1,0 +1,7 @@
+{
+  "name": "User-App-Lottired-Pos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
