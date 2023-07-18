@@ -25,15 +25,27 @@ const routes: Routes = [
   },
   {
     path: 'signup',
-    loadChildren: () => import('./pages/auth/signup/signup.module').then( m => m.SignupPageModule)
+    loadChildren: () =>
+      import('./pages/auth/signup/signup.module').then(
+        (m) => m.SignupPageModule
+      ),
   },
   {
     path: 'configurations',
-    loadChildren: () => import('./pages/configurations/configurations.module').then( m => m.ConfigurationsPageModule)
+    loadChildren: () =>
+      import('./pages/configurations/configurations.module').then(
+        (m) => m.ConfigurationsPageModule
+      ),
   },
   {
     path: 'news',
-    loadChildren: () => import('./pages/news/news.module').then( m => m.NewsPageModule)
+    loadChildren: () =>
+      import('./pages/news/news.module').then((m) => m.NewsPageModule),
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((m) => m.HomePageModule),
   },
 ];
 

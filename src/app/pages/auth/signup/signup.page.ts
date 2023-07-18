@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SigninPage } from '../signin/signin.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -8,8 +10,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class SignupPage implements OnInit {
   registrationForm!: FormGroup;
+  component = SigninPage;
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private router: Router) {}
 
   ngOnInit() {
     this.registrationForm = this.formBuilder.group({
@@ -34,5 +37,13 @@ export class SignupPage implements OnInit {
       // Lógica para enviar los datos del formulario
       console.log(this.registrationForm.value);
     }
+  }
+
+  abrirPagina(event: any) {
+    setTimeout(() => {
+      // Any calls to load data go here
+      event.target.complete();
+      this.router.navigate(['/tabs']);
+    }, 1000);
   }
 }
