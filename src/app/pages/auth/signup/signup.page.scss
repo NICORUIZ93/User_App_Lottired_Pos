@@ -1,0 +1,15 @@
+.container {
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-header,
+.form-inputs,
+.form-footer,
+.inputs {
+  margin-bottom: 20px;
+}

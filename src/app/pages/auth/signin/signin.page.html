@@ -11,36 +11,39 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <div class="cristal">
-      <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-        <img src="assets/Lottired_Pos (1).svg" alt="" srcset="" />
+  <div class="container">
+    <img src="assets/lottired1.jpg" alt="" srcset="" />
+    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
+      <div class="form-header">
+        <h3>Iniciar sesión</h3>
+      </div>
+      <div class="form-inputs">
         <ion-input
           fill="outline"
           formControlName="document"
           label="Usuario"
           label-placement="floating"
-          placeholder="Usuario"
           type="text"
+          class="inputs"
         ></ion-input>
-        <br />
         <ion-input
           fill="outline"
           formControlName="password"
           label="Contraseña"
           label-placement="floating"
-          placeholder="Contraseña"
           type="password"
+          class="inputs"
         ></ion-input>
-        <ion-button [disabled]="!loginForm.valid" type="submit"
-          >Ingresa
-        </ion-button>
-      </form>
-
-      <div>
-        <p>Olvidaste tu contraseña? ingresa <a href="">aqui</a>!</p>
       </div>
-      <a href=""></a>
+      <div class="ion-text-center">
+        <ion-button [disabled]="!loginForm.valid" type="submit"
+          >Ingresa</ion-button
+        >
+      </div>
+    </form>
+    <div class="form-footer">
+      <h3><b>Regístrate</b></h3>
+      <p>¿Olvidaste tu contraseña? Ingresa <a routerLink="/login/signup">aquí</a>!</p>
     </div>
-  </ion-content>
+  </div>
 </ion-content>

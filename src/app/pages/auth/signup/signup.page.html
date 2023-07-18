@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>signup</ion-title>
+    <ion-title>Registro de usuario</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +10,131 @@
       <ion-title size="large">signup</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <ion-select
+      formControlName="tipoDocumento"
+      label-placement="floating"
+      fill="outline"
+      label="Número de documento"
+      type="text"
+      class="inputs"
+    >
+      <ion-select-option value="cedula">Cédula</ion-select-option>
+      <ion-select-option value="pasaporte">Pasaporte</ion-select-option>
+      <ion-select-option value="otro">Otro</ion-select-option>
+    </ion-select>
+
+    <ion-input
+      formControlName="numeroDocumento"
+      label-placement="floating"
+      fill="outline"
+      label="Número de documento"
+      type="text"
+      class="inputs"
+    ></ion-input>
+
+    <ion-input
+      formControlName="nombres"
+      label="Nombres"
+      label-placement="floating"
+      fill="outline"
+      type="text"
+      class="inputs"
+    ></ion-input>
+
+    <ion-input
+      formControlName="apellidos"
+      label="Apellidos"
+      label-placement="floating"
+      fill="outline"
+      type="text"
+      class="inputs"
+    ></ion-input>
+
+    <ion-select
+      formControlName="genero"
+      label="Género"
+      label-placement="floating"
+      fill="outline"
+      type="text"
+      class="inputs"
+    >
+      <ion-select-option value="masculino">Masculino</ion-select-option>
+      <ion-select-option value="femenino">Femenino</ion-select-option>
+      <ion-select-option value="otro">Otro</ion-select-option>
+    </ion-select>
+
+    <ion-input
+      formControlName="fechaNacimiento"
+      label="Fecha de nacimiento"
+      label-placement="floating"
+      fill="outline"
+      type="date"
+      class="inputs"
+    ></ion-input>
+
+    <ion-input
+      formControlName="departamento"
+      label="Departamento"
+      label-placement="floating"
+      fill="outline"
+      type="text"
+      class="inputs"
+    ></ion-input>
+
+    <ion-input
+      formControlName="ciudad"
+      label="Ciudad"
+      label-placement="floating"
+      fill="outline"
+      type="text"
+      class="inputs"
+    ></ion-input>
+
+    <ion-input
+      formControlName="direccion"
+      label="Dirección"
+      label-placement="floating"
+      fill="outline"
+      type="text"
+      class="inputs"
+    ></ion-input>
+
+    <ion-input
+      formControlName="telefono"
+      label="Teléfono"
+      label-placement="floating"
+      fill="outline"
+      type="text"
+      class="inputs"
+    ></ion-input>
+
+    <ion-input
+      formControlName="correoElectronico"
+      label="Correo electrónico"
+      label-placement="floating"
+      fill="outline"
+      type="email"
+      class="inputs"
+    ></ion-input>
+
+    <ion-input
+      formControlName="confirmarCorreo"
+      label="Confirmar correo electrónico"
+      label-placement="floating"
+      fill="outline"
+      type="email"
+      class="inputs"
+    ></ion-input>
+
+    <ion-checkbox formControlName="terminosCondiciones"
+      ><p>Acepto los términos y condiciones</p></ion-checkbox
+    >
+    <br />
+    
+    <ion-button type="submit" [disabled]="!registrationForm.valid"
+      >Registrarse</ion-button
+    >
+  </form>
 </ion-content>
