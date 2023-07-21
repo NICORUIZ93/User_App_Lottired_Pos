@@ -3,4 +3,5 @@ export interface News {
   titulo: string;
   texto: string;
   fecha: string;
+  imagen: string;
 }

@@ -1,7 +1,7 @@
-import {Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {News} from '../models/news.model';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { News } from '../models/news.model';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -10,10 +10,9 @@ import { environment } from 'src/environments/environment';
 export class NewsService {
   url = environment.url;
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
   getNewsData(): Observable<News[]> {
-    return this.http.get<News[]>(this.url + '/news');
+    return this.http.get<News[]>('/assets/data/noticias.json');
   }
 }

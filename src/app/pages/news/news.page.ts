@@ -1,6 +1,7 @@
 import { News } from 'src/models/news.model';
 import { NewsService } from './../../../services/news.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-news',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./news.page.scss'],
 })
 export class NewsPage implements OnInit {
-  news: News[] = [];
+  news: Observable<News[]>;
   constructor(private newsService: NewsService) {}
 
   ngOnInit() {
@@ -16,9 +17,6 @@ export class NewsPage implements OnInit {
   }
 
   getNews() {
-    this.newsService.getNewsData().subscribe((data) => {
-      this.news = data;
-      console.log(data);
-    });
+    this.news = this.newsService.getNewsData();
   }
 }

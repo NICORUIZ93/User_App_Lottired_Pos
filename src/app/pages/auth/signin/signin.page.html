@@ -1,49 +1,53 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Registro de usuario</ion-title>
+    <ion-title>Inicio de sesión</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Registro de usuario</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div class="container">
-    <img src="assets/lottired1.jpg" alt="" srcset="" />
-    <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-      <div class="form-header">
-        <h3>Iniciar sesión</h3>
-      </div>
-      <div class="form-inputs">
-        <ion-input
-          fill="outline"
-          formControlName="document"
-          label="Usuario"
-          label-placement="floating"
-          type="text"
-          class="inputs"
-        ></ion-input>
-        <ion-input
-          fill="outline"
-          formControlName="password"
-          label="Contraseña"
-          label-placement="floating"
-          type="password"
-          class="inputs"
-        ></ion-input>
-      </div>
-      <div class="ion-text-center">
-        <ion-button [disabled]="!loginForm.valid" type="submit"
-          >Ingresa</ion-button
-        >
-      </div>
-    </form>
-    <div class="form-footer">
-      <h3><b>Regístrate</b></h3>
-      <p>¿Olvidaste tu contraseña? Ingresa <a routerLink="/login/signup">aquí</a>!</p>
-    </div>
-  </div>
+  <ion-grid class="ion-padding" [fixed]="true">
+    <ion-row class="ion-justify-content-center">
+      <ion-col sizeXs="12" size-md="6" size-lg="4"
+        ><form (ngSubmit)="onSubmit()" [formGroup]="loginForm" size="4">
+          <ion-img
+            src="/assets/lottired1.jpg"
+            alt="The Wisconsin State Capitol building in Madison, WI at night"
+          ></ion-img>
+          <div class="form-header">
+            <h3>Iniciar sesión</h3>
+          </div>
+          <div class="form-inputs">
+            <ion-input
+              fill="outline"
+              formControlName="document"
+              label="Usuario"
+              label-placement="floating"
+              type="text"
+              class="inputs"
+            ></ion-input>
+            <ion-input
+              fill="outline"
+              formControlName="password"
+              label="Contraseña"
+              label-placement="floating"
+              type="password"
+              class="inputs"
+            ></ion-input>
+          </div>
+          <div class="ion-text-center">
+            <ion-button [disabled]="!loginForm.valid" type="submit"
+              >Ingresa</ion-button
+            >
+          </div>
+        </form>
+        <div class="form-footer">
+          <h3><b>Regístrate</b></h3>
+          <p>
+            ¿Olvidaste tu contraseña? Ingresa
+            <a routerLink="/login/signup">aquí</a>!
+          </p>
+        </div></ion-col
+      >
+    </ion-row>
+  </ion-grid>
 </ion-content>
