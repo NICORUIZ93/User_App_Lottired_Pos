@@ -5,7 +5,16 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <img src="assets/lottired1.jpg" alt="" style="height: 30%" />
+  <swiper-container
+    pagination="true"
+    pagination-clickable="true"
+  >
+    <swiper-slide> <img src="assets/lottired1.jpg" alt="" /></swiper-slide>
+    <swiper-slide> <img src="assets/lottired1.jpg" alt="" /></swiper-slide>
+    <swiper-slide> <img src="assets/lottired1.jpg" alt="" /></swiper-slide>
+    <swiper-slide> <img src="assets/lottired1.jpg" alt="" /></swiper-slide>
+  </swiper-container>
+
   <ion-card>
     <ion-card-content>
       <ion-grid>
@@ -14,7 +23,7 @@
             sizeXs="6"
             sizeMd="4"
             sizeXl="3"
-            *ngFor="let icon of iconMenus|async "
+            *ngFor="let icon of iconMenus | async "
             ><ion-card>
               <ion-img [src]="icon.icon"></ion-img>
 
