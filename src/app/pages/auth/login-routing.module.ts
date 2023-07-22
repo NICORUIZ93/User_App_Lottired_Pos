@@ -5,19 +5,22 @@ import { LoginPage } from './login.page';
 
 const routes: Routes = [
   {
-    path: 'signin',
-    loadChildren: () =>
-      import('../signin/signin.module').then((m) => m.SigninPageModule),
-  },
-  {
-    path: 'signup',
-    loadChildren: () =>
-      import('../signup/signup.module').then((m) => m.SignupPageModule),
+    path: '**',
+    redirectTo: 'signup',
+    pathMatch: 'full',
   },
   {
     path: '',
-    redirectTo: 'signin',
-    pathMatch: 'full',
+    component: LoginPage,
+  },
+  {
+    path: 'signin',
+    loadChildren: () =>
+      import('./signin/signin.module').then((m) => m.SigninPageModule),
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   },
 ];
 

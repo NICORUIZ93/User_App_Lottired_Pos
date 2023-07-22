@@ -1,34 +1,11 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { Page404Component } from './pages/static/page404/page404.component';
 
 const routes: Routes = [
-  {
-    path: 'login',
-    loadChildren: () =>
-      import('./pages/auth/login/login.module').then((m) => m.LoginPageModule),
-  },
   {
     path: 'tabs',
     loadChildren: () =>
       import('./pages/tabs/tabs.module').then((m) => m.TabsPageModule),
-  },
-  {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full',
-  },
-  {
-    path: '**',
-    pathMatch: 'full',
-    component: Page404Component,
-  },
-  {
-    path: 'signup',
-    loadChildren: () =>
-      import('./pages/auth/signup/signup.module').then(
-        (m) => m.SignupPageModule
-      ),
   },
   {
     path: 'configurations',
@@ -46,6 +23,16 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomePageModule),
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+      import('./pages/auth/login.module').then((m) => m.LoginPageModule),
+  },
+  {
+    path: '',
+    redirectTo: 'login',
+    pathMatch: 'full',
   },
 ];
 
