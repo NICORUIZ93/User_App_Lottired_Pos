@@ -1,32 +1,29 @@
-<ion-header>
-  <app-header></app-header>
-  <ion-toolbar>
-    <ion-title>Hola, Nicolas</ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-header name="Bienvenido !!!"></app-header>
+
 <ion-content [fullscreen]="true">
   <swiper-container
+    class="mySwiper"
     pagination="true"
-    pagination-clickable="true"
+    effect="cube"
+    grab-cursor="true"
+    cube-effect-shadow="true"
+    cube-effect-slide-shadows="true"
+    cube-effect-shadow-offset="20"
+    cube-effect-shadow-scale="0.94"
+    autoplay-delay="2500"
   >
-    <swiper-slide> <img src="assets/lottired1.jpg" alt="" /></swiper-slide>
-    <swiper-slide> <img src="assets/lottired1.jpg" alt="" /></swiper-slide>
-    <swiper-slide> <img src="assets/lottired1.jpg" alt="" /></swiper-slide>
-    <swiper-slide> <img src="assets/lottired1.jpg" alt="" /></swiper-slide>
+    <swiper-slide *ngFor="let item of [1,1,1,1,1,1]">
+      <img src="assets/lottired1.jpg" alt=""
+    /></swiper-slide>
   </swiper-container>
 
   <ion-card>
     <ion-card-content>
       <ion-grid>
         <ion-row>
-          <ion-col
-            sizeXs="6"
-            sizeMd="4"
-            sizeXl="3"
-            *ngFor="let icon of iconMenus | async "
+          <ion-col sizeLg="2" sizeXs="6" *ngFor="let icon of iconMenus | async "
             ><ion-card>
               <ion-img [src]="icon.icon"></ion-img>
-
               <ion-card-content><span> {{icon.name}} </span></ion-card-content>
             </ion-card></ion-col
           >
