@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { Page404Component } from './pages/static/page404/page404.component';
 
 const routes: Routes = [
   {
@@ -35,8 +36,13 @@ const routes: Routes = [
       import('./pages/lottery/lottery.module').then((m) => m.LotteryPageModule),
   },
   {
-    path: '',
-    redirectTo: 'tabs',
+    path: 'Page404',
+    component: Page404Component,
+  },
+
+  {
+    path: '**',
+    redirectTo: 'Page404',
     pathMatch: 'full',
   },
 ];

@@ -1,5 +1,20 @@
-<div class="container">
-  <h1>404</h1>
-  <p>Oops! La página que estás buscando no existe.</p>
-  <a [routerLink]="['/']">Volver a la página principal</a>
-</div>
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Error 404 - Página no encontrada </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="container">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" class="error-message">
+        <h1>Error 404 - Página no encontrada</h1>
+        <ion-img src="assets/icons/triste.gif"></ion-img>
+        <p>Lamentamos, la página que solicitaste no se pudo encontrar.</p>
+        <ion-button expand="block" fill="clear" shape="round" routerLink="/tabs">
+          Volver
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
