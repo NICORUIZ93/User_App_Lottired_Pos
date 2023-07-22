@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { Page404Component } from './pages/static/page404/page404.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
   declarations: [AppComponent, Page404Component],
@@ -18,6 +19,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -1,16 +1,4 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
-
-    <ion-title>Registro de usuario</ion-title>
-
-    <ion-avatar slot="end">
-      <img alt="Lottired Pos" src="/assets/lottired1.jpg" />
-    </ion-avatar>
-  </ion-toolbar>
-</ion-header>
+<app-header name="Registro de Usuario"></app-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
   <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">

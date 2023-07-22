@@ -1,9 +1,34 @@
-<ion-header [translucent]="true">
+<ion-header>
+  <app-header></app-header>
   <ion-toolbar>
-    <ion-title>home</ion-title>
+    <ion-title>Hola, Nicolas</ion-title>
   </ion-toolbar>
 </ion-header>
-
 <ion-content [fullscreen]="true">
-home
+  <img src="assets/lottired1.jpg" alt="" style="height: 30%" />
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col
+            sizeXs="6"
+            sizeMd="4"
+            sizeXl="3"
+            *ngFor="let icon of iconMenus|async "
+            ><ion-card>
+              <ion-img [src]="icon.icon"></ion-img>
+
+              <ion-card-content><span> {{icon.name}} </span></ion-card-content>
+            </ion-card></ion-col
+          >
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title><span>Saldo disponible: $10.1000</span></ion-title>
+  </ion-toolbar>
+</ion-footer>
