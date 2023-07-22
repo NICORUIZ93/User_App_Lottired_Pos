@@ -1,4 +1,5 @@
 export interface IconsMenu {
-    name: string;
-    icon: string;
+  name: string;
+  icon: string;
+  link: string;
 }

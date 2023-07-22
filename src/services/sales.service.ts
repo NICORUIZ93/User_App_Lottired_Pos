@@ -1,8 +1,9 @@
-import {Observable} from 'rxjs';
-import {HttpClient} from '@angular/common/http';
-import {Injectable} from '@angular/core';
-import {environment} from 'src/environments/environment';
-import {Sales} from '../models/sales.model';
+import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
+import { Sales } from '../models/sales.model';
+import { IconsMenu } from 'src/interfaces';
 
 @Injectable({
   providedIn: 'root',
@@ -10,10 +11,9 @@ import {Sales} from '../models/sales.model';
 export class SalesService {
   url = environment.url;
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) {}
 
-  getSalesData(): Observable<Sales[]> {
-    return this.http.get<Sales[]>(this.url + '/sales');
+  getSalesData(): Observable<IconsMenu[]> {
+    return this.http.get<IconsMenu[]>('../assets/data/lottery.json');
   }
 }

@@ -1,18 +1,22 @@
 [
   {
     "name": "Lotería",
-    "icon": "assets/icons/loteria.gif"
+    "icon": "assets/icons/loteria.gif",
+    "link": "/lottery"
   },
   {
     "name": "Recargas",
-    "icon": "assets/icons/energia.gif"
+    "icon": "assets/icons/energia.gif",
+    "link": "/lottery"
   },
   {
     "name": "Raspa y gana",
-    "icon": "assets/icons/boleto.gif"
+    "icon": "assets/icons/boleto.gif",
+    "link": "/lottery"
   },
   {
     "name": "Lotería",
-    "icon": "assets/icons/estadisticas.gif"
+    "icon": "assets/icons/estadisticas.gif",
+    "link": "/lottery"
   }
 ]

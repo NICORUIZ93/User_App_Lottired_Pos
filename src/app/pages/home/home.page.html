@@ -22,7 +22,7 @@
       <ion-grid>
         <ion-row>
           <ion-col sizeLg="2" sizeXs="6" *ngFor="let icon of iconMenus | async "
-            ><ion-card>
+            ><ion-card [routerLink]="icon.link">
               <ion-img [src]="icon.icon"></ion-img>
               <ion-card-content><span> {{icon.name}} </span></ion-card-content>
             </ion-card></ion-col

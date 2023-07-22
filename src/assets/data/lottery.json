@@ -1,0 +1,22 @@
+[
+  {
+    "name": "venta de lotería",
+    "icon": "assets/icons/lottery.gif",
+    "link": "/lottery/sale"
+  },
+  {
+    "name": "Consula resultados de Lotería",
+    "icon": "assets/icons/otorgar.gif",
+    "link": ""
+  },
+  {
+    "name": "Lectura de premios",
+    "icon": "assets/icons/lecturabarras.gif",
+    "link": ""
+  },
+  {
+    "name": "Recambio",
+    "icon": "assets/icons/efectivo.gif",
+    "link": ""
+  }
+]

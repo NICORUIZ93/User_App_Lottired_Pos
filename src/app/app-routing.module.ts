@@ -30,6 +30,11 @@ const routes: Routes = [
       import('./pages/auth/login.module').then((m) => m.LoginPageModule),
   },
   {
+    path: 'lottery',
+    loadChildren: () =>
+      import('./pages/lottery/lottery.module').then((m) => m.LotteryPageModule),
+  },
+  {
     path: '',
     redirectTo: 'tabs',
     pathMatch: 'full',
