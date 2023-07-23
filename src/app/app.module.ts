@@ -6,9 +6,10 @@ import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Page404Component } from './pages/static/page404/page404.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ComponentsModule } from './components/components.module';
+import { AuthInterceptorService } from 'src/services/interceptor/auth-interceptor.service';
 
 @NgModule({
   declarations: [AppComponent, Page404Component],
@@ -21,7 +22,13 @@ import { ComponentsModule } from './components/components.module';
     ReactiveFormsModule,
     ComponentsModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

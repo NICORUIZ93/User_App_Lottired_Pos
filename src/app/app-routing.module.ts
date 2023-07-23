@@ -42,7 +42,7 @@ const routes: Routes = [
 
   {
     path: '**',
-    redirectTo: 'Page404',
+    redirectTo: 'home',
     pathMatch: 'full',
   },
 ];
