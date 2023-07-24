@@ -42,7 +42,7 @@ const routes: Routes = [
   {
     path: 'loading-page',
     loadChildren: () =>
-      import('./pages/loading-page/loading-page.module').then(
+      import('./components/loading-page/loading-page.module').then(
         (m) => m.LoadingPagePageModule
       ),
   },
