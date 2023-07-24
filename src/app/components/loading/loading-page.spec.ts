@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-import { LoadingPagePage } from './loading-page.page';
+import { LoadingPage } from './loading-page';
 
 describe('LoadingPagePage', () => {
-  let component: LoadingPagePage;
-  let fixture: ComponentFixture<LoadingPagePage>;
+  let component: LoadingPage;
+  let fixture: ComponentFixture<LoadingPage>;
 
   beforeEach(waitForAsync () => {
-    fixture = TestBed.createComponent(LoadingPagePage);
+    fixture = TestBed.createComponent(LoadingPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

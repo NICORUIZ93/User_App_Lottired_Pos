@@ -36,20 +36,20 @@ const routes: Routes = [
       import('./pages/lottery/lottery.module').then((m) => m.LotteryPageModule),
   },
   {
-    path: 'Page404',
-    component: Page404Component,
-  },
-  {
     path: 'loading-page',
     loadChildren: () =>
-      import('./components/loading-page/loading-page.module').then(
+      import('./components/loading/loading-page.module').then(
         (m) => m.LoadingPagePageModule
       ),
   },
   {
     path: '**',
-    redirectTo: 'loading-page',
+    redirectTo: 'login',
     pathMatch: 'full',
+  },
+  {
+    path: 'Page404',
+    component: Page404Component,
   },
 ];
 

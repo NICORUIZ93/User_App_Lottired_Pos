@@ -8,9 +8,12 @@ ion-row {
 
 swiper-slide ion-img {
   object-fit: contain;
-  max-width: 700px;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  max-width: 400px;
 }
 
 ion-col ion-img {
-  max-width: 300px;
+  max-width: 200px;
 }
