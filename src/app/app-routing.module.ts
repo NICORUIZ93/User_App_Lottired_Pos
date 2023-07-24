@@ -39,10 +39,16 @@ const routes: Routes = [
     path: 'Page404',
     component: Page404Component,
   },
-
+  {
+    path: 'loading-page',
+    loadChildren: () =>
+      import('./pages/loading-page/loading-page.module').then(
+        (m) => m.LoadingPagePageModule
+      ),
+  },
   {
     path: '**',
-    redirectTo: 'home',
+    redirectTo: 'loading-page',
     pathMatch: 'full',
   },
 ];
