@@ -21,7 +21,7 @@ export class HomePage implements OnInit {
 
   ngOnInit() {
     this.getIconMenu();
-    console.log(this.platform);
+    console.log(this.platform.platforms());
     this.httpClient
       .get('http://localhost:8080/TEST', { responseType: 'text' })
       .subscribe({

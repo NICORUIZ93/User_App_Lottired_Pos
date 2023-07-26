@@ -13,6 +13,6 @@ export class NewsService {
   constructor(private http: HttpClient) {}
 
   getNewsData(): Observable<News[]> {
-    return this.http.get<News[]>('/assets/data/noticias.json');
+    return this.http.get<News[]>(environment.url + 'API-SERVICES/news');
   }
 }
