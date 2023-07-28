@@ -34,6 +34,7 @@
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.2.1",
     "@ionic/lab": "3.2.15",
+    "@jcesarmobile/ssl-skip": "0.2.0",
     "cordova-plugin-vibration": "^3.1.1",
     "http-server": "^14.1.1",
     "ionicons": "^7.1.2",
