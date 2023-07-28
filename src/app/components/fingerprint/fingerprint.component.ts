@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FingerprintAIO } from '@ionic-native/fingerprint-aio';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
+
 @Component({
   selector: 'app-fingerprint',
   templateUrl: './fingerprint.component.html',

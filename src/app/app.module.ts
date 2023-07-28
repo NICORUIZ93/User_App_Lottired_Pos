@@ -1,9 +1,8 @@
-import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 
 import { IonicModule } from '@ionic/angular';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Page404Component } from './pages/static/page404/page404.component';
@@ -31,12 +30,12 @@ import { ServiceWorkerModule } from '@angular/service-worker';
     }),
   ],
   providers: [
+    FingerprintAIO,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: AuthInterceptorService,
       multi: true,
     },
-    FingerprintAIO,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
