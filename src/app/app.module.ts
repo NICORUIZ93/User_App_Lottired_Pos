@@ -1,3 +1,4 @@
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -35,6 +36,7 @@ import { ServiceWorkerModule } from '@angular/service-worker';
       useClass: AuthInterceptorService,
       multi: true,
     },
+    FingerprintAIO,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],

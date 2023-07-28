@@ -1,5 +1,4 @@
 import { HttpClient } from '@angular/common/http';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { Component, OnInit } from '@angular/core';
 import { HomeService } from '../../../services/home.service';
 import { Observable } from 'rxjs';
