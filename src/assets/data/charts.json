@@ -1,0 +1,307 @@
+[
+  {
+    "series": [
+      {
+        "name": "series1",
+        "data": [31, 40, 28, 51, 42, 109, 100]
+      },
+      {
+        "name": "series2",
+        "data": [11, 32, 45, 32, 34, 52, 41]
+      }
+    ],
+    "chart": {
+      "height": 350,
+      "type": "area"
+    },
+    "dataLabels": {
+      "enabled": false
+    },
+    "stroke": {
+      "curve": "smooth"
+    },
+    "xaxis": {
+      "type": "datetime",
+      "categories": [
+        "2018-09-19T00:00:00.000Z",
+        "2018-09-19T01:30:00.000Z",
+        "2018-09-19T02:30:00.000Z",
+        "2018-09-19T03:30:00.000Z",
+        "2018-09-19T04:30:00.000Z",
+        "2018-09-19T05:30:00.000Z",
+        "2018-09-19T06:30:00.000Z"
+      ]
+    },
+    "tooltip": {
+      "x": {
+        "format": "dd/MM/yy HH:mm"
+      }
+    }
+  },
+  {
+    "series": [
+      {
+        "name": "series1",
+        "data": [31, 40, 28, 51, 42, 109, 100]
+      },
+      {
+        "name": "series2",
+        "data": [11, 32, 45, 32, 34, 52, 41]
+      }
+    ],
+    "chart": {
+      "height": 350,
+      "type": "line"
+    },
+    "dataLabels": {
+      "enabled": false
+    },
+    "stroke": {
+      "curve": "smooth"
+    },
+    "xaxis": {
+      "type": "datetime",
+      "categories": [
+        "2018-09-19T00:00:00.000Z",
+        "2018-09-19T01:30:00.000Z",
+        "2018-09-19T02:30:00.000Z",
+        "2018-09-19T03:30:00.000Z",
+        "2018-09-19T04:30:00.000Z",
+        "2018-09-19T05:30:00.000Z",
+        "2018-09-19T06:30:00.000Z"
+      ]
+    },
+    "tooltip": {
+      "x": {
+        "format": "dd/MM/yy HH:mm"
+      }
+    }
+  },
+  {
+    "series": [
+      {
+        "name": "series1",
+        "data": [31, 40, 28, 51, 42, 109, 100]
+      },
+      {
+        "name": "series2",
+        "data": [11, 32, 45, 32, 34, 52, 41]
+      }
+    ],
+    "chart": {
+      "height": 350,
+      "type": "bar"
+    },
+    "dataLabels": {
+      "enabled": false
+    },
+    "stroke": {
+      "curve": "smooth"
+    },
+    "xaxis": {
+      "type": "datetime",
+      "categories": [
+        "2018-09-19T00:00:00.000Z",
+        "2018-09-19T01:30:00.000Z",
+        "2018-09-19T02:30:00.000Z",
+        "2018-09-19T03:30:00.000Z",
+        "2018-09-19T04:30:00.000Z",
+        "2018-09-19T05:30:00.000Z",
+        "2018-09-19T06:30:00.000Z"
+      ]
+    },
+    "tooltip": {
+      "x": {
+        "format": "dd/MM/yy HH:mm"
+      }
+    }
+  },
+  {
+    "series": [
+      {
+        "name": "series1",
+        "data": [31, 40, 28, 51, 42, 109, 100]
+      },
+      {
+        "name": "series2",
+        "data": [11, 32, 45, 32, 34, 52, 41]
+      }
+    ],
+    "chart": {
+      "height": 350,
+      "type": "scatter"
+    },
+    "dataLabels": {
+      "enabled": false
+    },
+    "stroke": {
+      "curve": "smooth"
+    },
+    "xaxis": {
+      "type": "datetime",
+      "categories": [
+        "2018-09-19T00:00:00.000Z",
+        "2018-09-19T01:30:00.000Z",
+        "2018-09-19T02:30:00.000Z",
+        "2018-09-19T03:30:00.000Z",
+        "2018-09-19T04:30:00.000Z",
+        "2018-09-19T05:30:00.000Z",
+        "2018-09-19T06:30:00.000Z"
+      ]
+    },
+    "tooltip": {
+      "x": {
+        "format": "dd/MM/yy HH:mm"
+      }
+    }
+  },
+  {
+    "series": [44, 55, 13, 43, 22],
+    "chart": {
+      "width": 380,
+      "type": "pie"
+    },
+    "labels": ["Team A", "Team B", "Team C", "Team D", "Team E"],
+    "responsive": [
+      {
+        "breakpoint": 480,
+        "options": {
+          "chart": {
+            "width": 200
+          },
+          "legend": {
+            "position": "bottom"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "series": [
+      {
+        "name": "Series 1",
+        "data": [80, 50, 30, 40, 100, 20]
+      }
+    ],
+    "chart": {
+      "height": 350,
+      "type": "radar"
+    },
+    "title": {
+      "text": "Basic Radar Chart"
+    },
+    "xaxis": {
+      "categories": ["January", "February", "March", "April", "May", "June"]
+    }
+  },
+  {
+    "series": [14, 23, 21, 17, 15, 10, 12, 17, 21],
+    "chart": {
+      "type": "polarArea"
+    },
+    "stroke": {
+      "colors": ["#fff"]
+    },
+    "fill": {
+      "opacity": 0.8
+    },
+    "responsive": [
+      {
+        "breakpoint": 480,
+        "options": {
+          "chart": {
+            "width": 200
+          },
+          "legend": {
+            "position": "bottom"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "series": [70],
+    "chart": {
+      "height": 350,
+      "type": "radialBar"
+    },
+    "plotOptions": {
+      "radialBar": {
+        "hollow": {
+          "size": "70%"
+        }
+      }
+    },
+    "labels": ["Cricket"]
+  },
+  {
+    "series": [
+      {
+        "data": [
+          {
+            "x": "New Delhi",
+            "y": 218
+          },
+          {
+            "x": "Kolkata",
+            "y": 149
+          },
+          {
+            "x": "Mumbai",
+            "y": 184
+          },
+          {
+            "x": "Ahmedabad",
+            "y": 55
+          },
+          {
+            "x": "Bangaluru",
+            "y": 84
+          },
+          {
+            "x": "Pune",
+            "y": 31
+          },
+          {
+            "x": "Chennai",
+            "y": 70
+          },
+          {
+            "x": "Jaipur",
+            "y": 30
+          },
+          {
+            "x": "Surat",
+            "y": 44
+          },
+          {
+            "x": "Hyderabad",
+            "y": 68
+          },
+          {
+            "x": "Lucknow",
+            "y": 28
+          },
+          {
+            "x": "Indore",
+            "y": 19
+          },
+          {
+            "x": "Kanpur",
+            "y": 29
+          }
+        ]
+      }
+    ],
+    "legend": {
+      "show": false
+    },
+    "chart": {
+      "height": 350,
+      "type": "treemap"
+    },
+    "title": {
+      "text": "Basic Treemap"
+    }
+  }
+]

@@ -36,6 +36,13 @@ const routes: Routes = [
       import('./pages/lottery/lottery.module').then((m) => m.LotteryPageModule),
   },
   {
+    path: 'statistics',
+    loadChildren: () =>
+      import('./pages/statistics/statistics.module').then(
+        (m) => m.StatisticsPageModule
+      ),
+  },
+  {
     path: 'loading-page',
     loadChildren: () =>
       import('./components/loading/loading-page.module').then(

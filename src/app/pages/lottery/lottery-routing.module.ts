@@ -10,8 +10,9 @@ const routes: Routes = [
   },
   {
     path: 'sale',
-    loadChildren: () => import('./sale/sale.module').then( m => m.SalePageModule)
-  }
+    loadChildren: () =>
+      import('./sale/sale.module').then((m) => m.SalePageModule),
+  },
 ];
 
 @NgModule({
