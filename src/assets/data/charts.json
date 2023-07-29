@@ -11,7 +11,7 @@
       }
     ],
     "chart": {
-      "height": 350,
+      "height": 400,
       "type": "area"
     },
     "dataLabels": {
@@ -50,7 +50,7 @@
       }
     ],
     "chart": {
-      "height": 350,
+      "height": 400,
       "type": "line"
     },
     "dataLabels": {
@@ -89,7 +89,7 @@
       }
     ],
     "chart": {
-      "height": 350,
+      "height": 400,
       "type": "bar"
     },
     "dataLabels": {
@@ -128,7 +128,7 @@
       }
     ],
     "chart": {
-      "height": 350,
+      "height": 400,
       "type": "scatter"
     },
     "dataLabels": {
@@ -158,7 +158,7 @@
   {
     "series": [44, 55, 13, 43, 22],
     "chart": {
-      "width": 380,
+      "width": 400,
       "type": "pie"
     },
     "labels": ["Team A", "Team B", "Team C", "Team D", "Team E"],
@@ -184,7 +184,7 @@
       }
     ],
     "chart": {
-      "height": 350,
+      "height": 400,
       "type": "radar"
     },
     "title": {
@@ -222,7 +222,7 @@
   {
     "series": [70],
     "chart": {
-      "height": 350,
+      "height": 400,
       "type": "radialBar"
     },
     "plotOptions": {
@@ -297,7 +297,7 @@
       "show": false
     },
     "chart": {
-      "height": 350,
+      "height": 400,
       "type": "treemap"
     },
     "title": {

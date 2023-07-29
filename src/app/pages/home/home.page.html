@@ -1,4 +1,19 @@
-<app-header name="Bienvenido !!!"></app-header>
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Bienvenido</ion-title>
+    <ion-item slot="end">
+      <ion-avatar>
+        <img
+          alt="Silhouette of a person's head"
+          src="assets/icons/husband.gif"
+        />
+      </ion-avatar>
+    </ion-item>
+  </ion-toolbar>
+</ion-header>
 
 <ion-content fullscreen="true">
   <swiper-container
@@ -6,7 +21,6 @@
     pagination="true"
     effect="cube"
     grab-cursor="true"
-
     autoplay-delay="2500"
   >
     <swiper-slide *ngFor="let item of [1,1,1,1,1,1]" i>

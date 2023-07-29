@@ -1,17 +1,15 @@
 <ion-content>
-  <ion-grid [fixed]="true">
+  <ion-grid>
     <ion-row class="ion-justify-content-center">
-      <ion-col size="auto" *ngFor="let chart of chartOptions | async">
-        <ion-list>
-          <ion-item>
-            <apx-chart
-              [series]="chart.series"
-              [chart]="chart.chart"
-              [xaxis]="chart.xaxis"
-              [title]="chart.title"
-            ></apx-chart>
-          </ion-item>
-        </ion-list>
+      <ion-col sizeXs="12" sizeMd="6" *ngFor="let chart of chartOptions | async">
+        <ion-card>
+          <apx-chart
+            [series]="chart.series"
+            [chart]="chart.chart"
+            [xaxis]="chart.xaxis"
+            [title]="chart.title"
+          ></apx-chart>
+        </ion-card>
       </ion-col>
     </ion-row>
   </ion-grid>

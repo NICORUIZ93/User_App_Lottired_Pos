@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 
 @Component({
@@ -7,7 +8,7 @@ import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
   styleUrls: ['./fingerprint.component.scss'],
 })
 export class FingerprintComponent implements OnInit {
-  constructor(private fingerprintAIO: FingerprintAIO) {}
+  constructor(private fingerprintAIO: FingerprintAIO, private router: Router) {}
 
   ngOnInit() {
     this.fingerprintAIO
@@ -46,6 +47,7 @@ export class FingerprintComponent implements OnInit {
           .then((result: any) => {
             console.log(result);
             alert('Successfully Authenticated!');
+            this.router.navigate(['/tabs']);
           })
           .catch((error: any) => {
             console.log(error);
