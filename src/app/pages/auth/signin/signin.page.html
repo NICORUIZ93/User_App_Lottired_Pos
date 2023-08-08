@@ -2,12 +2,10 @@
   <ion-grid>
     <ion-row class="ion-justify-content-center">
       <ion-col size="6">
-        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
-          <ion-col>
-            <ion-img src="assets/icons/logo.png" alt="" />
-            <h2>Iniciar sesión</h2>
-          </ion-col>
+        <ion-img src="assets/icons/logo.png" alt="" />
+        <h2>Iniciar sesión</h2>
 
+        <form (ngSubmit)="onSubmit()" [formGroup]="loginForm">
           <ion-list>
             <ion-item>
               <ion-input
@@ -33,7 +31,8 @@
           >
         </form>
         <app-fingerprint></app-fingerprint>
-        <h3>
+
+        <h3 class="ion-margin">
           <b><a routerLink="/login/signup">Regístrate</a></b>
         </h3>
 
