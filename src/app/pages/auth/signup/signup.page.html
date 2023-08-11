@@ -14,7 +14,7 @@
         <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
           <ion-list>
             <ion-select
-              formControlName="tipoDocumento"
+              formControlName="documentType"
               label-placement="floating"
               fill="outline"
               label="Tipo de documento"
@@ -27,7 +27,7 @@
             </ion-select>
 
             <ion-input
-              formControlName="numeroDocumento"
+              formControlName="documentNumber"
               label-placement="floating"
               fill="outline"
               label="Número de documento"
@@ -36,7 +36,7 @@
             ></ion-input>
 
             <ion-input
-              formControlName="nombres"
+              formControlName="firstName"
               label="Nombres"
               label-placement="floating"
               fill="outline"
@@ -45,7 +45,7 @@
             ></ion-input>
 
             <ion-input
-              formControlName="apellidos"
+              formControlName="firstLastName"
               label="Apellidos"
               label-placement="floating"
               fill="outline"
@@ -54,7 +54,7 @@
             ></ion-input>
 
             <ion-select
-              formControlName="genero"
+              formControlName="gender"
               label="Género"
               label-placement="floating"
               fill="outline"
@@ -67,7 +67,7 @@
             </ion-select>
 
             <ion-input
-              formControlName="fechaNacimiento"
+              formControlName="dateOfBirth"
               label="Fecha de nacimiento"
               label-placement="floating"
               fill="outline"
@@ -76,7 +76,7 @@
             ></ion-input>
 
             <ion-input
-              formControlName="departamento"
+              formControlName="department"
               label="Departamento"
               label-placement="floating"
               fill="outline"
@@ -85,7 +85,7 @@
             ></ion-input>
 
             <ion-input
-              formControlName="ciudad"
+              formControlName="city"
               label="Ciudad"
               label-placement="floating"
               fill="outline"
@@ -94,7 +94,7 @@
             ></ion-input>
 
             <ion-input
-              formControlName="direccion"
+              formControlName="address"
               label="Dirección"
               label-placement="floating"
               fill="outline"
@@ -103,7 +103,7 @@
             ></ion-input>
 
             <ion-input
-              formControlName="telefono"
+              formControlName="phone"
               label="Teléfono"
               label-placement="floating"
               fill="outline"
@@ -112,7 +112,7 @@
             ></ion-input>
 
             <ion-input
-              formControlName="correoElectronico"
+              formControlName="email"
               label="Correo electrónico"
               label-placement="floating"
               fill="outline"
@@ -121,18 +121,27 @@
             ></ion-input>
 
             <ion-input
-              formControlName="confirmarCorreo"
+              formControlName="confirmEmail"
               label="Confirmar correo electrónico"
               label-placement="floating"
               fill="outline"
               type="email"
               class="inputs"
             ></ion-input>
+
+            <ion-input
+            formControlName="password"
+            label="password"
+            label-placement="floating"
+            fill="outline"
+            type="password"
+            class="inputs"
+          ></ion-input>
           </ion-list>
 
           <div>
             <ion-item slot="start">
-              <ion-checkbox formControlName="terminosCondiciones"
+              <ion-checkbox formControlName="termsConditions"
                 ><p>Acepto los términos y condiciones</p></ion-checkbox
               >
             </ion-item>

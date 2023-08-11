@@ -23,13 +23,12 @@ export class SigninPage implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      document: ['', Validators.required],
+      documentNumber: ['', Validators.required],
       password: ['', Validators.required],
     });
   }
 
   onSubmit() {
     this.loginService.signin(this.loginForm.value);
-    this.router.navigate(['/tabs']);
   }
 }

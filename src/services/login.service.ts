@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { Login } from 'src/models/login.model';
+import { Register } from 'src/models/register.model';
 
 @Injectable({
   providedIn: 'root',
@@ -13,9 +14,8 @@ export class LoginService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  signin(data: any) {
-    this.user = data;
-    this.http.post(this.url + '/authentication/sign-in', this.user).subscribe({
+  signin(data: Login) {
+    this.http.post(this.url + '/auth/login', data).subscribe({
       next: (value: any) => {
         localStorage.setItem('auth_token', value.token);
       },
@@ -28,17 +28,27 @@ export class LoginService {
     });
   }
 
-  signup(data: any): Observable<any> {
-    return this.http.post(this.url + '/authentication/sign-up', data);
+  signup(data: Register) {
+    this.http.post(this.url + '/auth/register', data).subscribe({
+      next: (value: any) => {
+        localStorage.setItem('auth_token', value.token);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+      complete: () => {
+        this.router.navigate(['/login/signin']);
+      },
+    });
   }
 
   logout() {
-    this.http.post(this.url + '/authentication/sign-in', {});
+    this.http.post(this.url + '/authentication/logout', {});
   }
 
   getToken(): Promise<boolean> {
     return new Promise((resolve, reject) => {
-      this.http.post(this.url + '/authentication/sign-in', this.user).subscribe(
+      this.http.post(this.url + '/auth/login', this.user).subscribe(
         (data: any) => {
           localStorage.setItem('auth_token', data.token);
           resolve(data.token ? true : false);

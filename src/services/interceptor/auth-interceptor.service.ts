@@ -17,7 +17,12 @@ export class AuthInterceptorService implements HttpInterceptor {
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
     return next.handle(
-      req.clone({ headers: req.headers.set('Authorization', 'my-auth-token') })
+      req.clone({
+        headers: req.headers.set(
+          'Authorization',
+          localStorage.getItem('auth_token')
+        ),
+      })
     );
   }
 }
