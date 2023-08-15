@@ -1,7 +1,7 @@
 import { News } from 'src/models/news.model';
-import { NewsService } from './../../../services/news.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
+import { NotificationService } from 'src/services/notification.service';
 
 @Component({
   selector: 'app-news',
@@ -10,13 +10,15 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class NewsPage implements OnInit {
   news: Observable<News[]>;
-  constructor(private newsService: NewsService) {}
+  constructor(private notificationService: NotificationService) {}
 
   ngOnInit() {
     this.getNews();
   }
 
   getNews() {
-    this.news = this.newsService.getNewsData();
+    this.news = this.notificationService.getNewsData();
   }
+
+  unread(item){}
 }

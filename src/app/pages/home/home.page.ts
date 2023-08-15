@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { HomeService } from '../../../services/home.service';
+import { Platform } from '@ionic/angular';
 import { Observable } from 'rxjs';
 import { IconsMenu } from 'src/interfaces';
-import { Platform } from '@ionic/angular';
+import { HomeService } from '../../../services/home.service';
+import { LoginService } from '../../../services/login.service';
 
 @Component({
   selector: 'app-home',
@@ -11,23 +11,18 @@ import { Platform } from '@ionic/angular';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
+  username: string;
   iconMenus: Observable<IconsMenu[]>;
   constructor(
     private homeService: HomeService,
     private platform: Platform,
-    private httpClient: HttpClient
+    private loginService: LoginService
   ) {}
 
   ngOnInit() {
     this.getIconMenu();
     console.log(this.platform.platforms());
-    this.httpClient
-      .get('http://localhost:8080/TEST', { responseType: 'text' })
-      .subscribe({
-        next: (value) => {
-          console.log(value);
-        },
-      });
+    this.username = localStorage.getItem('username');
   }
 
   getIconMenu() {

@@ -9,6 +9,7 @@ import { Register } from 'src/models/register.model';
   providedIn: 'root',
 })
 export class LoginService {
+  username: string;
   url = environment.url;
   user = [];
 
@@ -18,6 +19,7 @@ export class LoginService {
     this.http.post(this.url + '/auth/login', data).subscribe({
       next: (value: any) => {
         localStorage.setItem('auth_token', value.token);
+        localStorage.setItem('username', value.firstName);
       },
       error: (err) => {
         console.log(err);
@@ -40,10 +42,6 @@ export class LoginService {
         this.router.navigate(['/login/signin']);
       },
     });
-  }
-
-  logout() {
-    this.http.post(this.url + '/authentication/logout', {});
   }
 
   getToken(): Promise<boolean> {
